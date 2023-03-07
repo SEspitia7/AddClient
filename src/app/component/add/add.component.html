@@ -1,0 +1,70 @@
+<!-- The following line displays a title for the form -->
+<p>Ingresar datos de cliente</p>
+
+<!-- The form starts here. addForm is the name of the FormGroup instance, and addClient() is the function that will be called when the form is submitted. -->
+<form [formGroup]="addForm" (ngSubmit)="addClient()">
+
+  <!-- The p-grid class is used to create a responsive grid layout. -->
+  <div class="p-grid">
+
+    <!-- This section contains the fields related to the client's document. -->
+    <section id="Documento">
+      <!-- The p-col-12 and p-md-4 classes define the size of the columns in the grid. In this case, the columns will occupy 12 columns in a small screen and 4 columns in a medium-sized screen. -->
+      <div id="DocType" class="p-col-12 p-md-4">
+        <span class="p-float-label">
+          <label for="docType">Tipo de documento</label>
+          <!-- The select formControlName="doc_type" line binds the doc_type field in the FormGroup instance to this dropdown menu. The [(ngModel)]="selectedDocType" line binds the selected value to a property in the component. -->
+          <select formControlName="doc_type" id="docType" [(ngModel)]="selectedDocType">
+            <!-- The *ngFor directive is used to iterate over the docTypeOptions array and generate an option element for each item. The [value] attribute binds the value of the option to the value property of the corresponding item in the array. -->
+            <option *ngFor="let docType of docTypeOptions" [value]="docType.value">{{docType.label}}</option>
+          </select>
+        </span>
+      </div>
+      <!-- The following div contains the field for the document number, which is bound to the doc_number field in the FormGroup instance. -->
+      <div class="p-col-12 p-md-4 ">
+        <span class="p-float-label">
+          <label for="docNumber">Numero de documento</label>
+          <input type="text" [(ngModel)]="client.doc_number" formControlName="doc_number" id="docNumber">
+        </span>
+      </div>
+    </section> 
+
+    <!-- This section contains the fields related to the client's personal information. -->
+    <section id="Datos">
+      <div id="Names" class="p-col-12 p-md-4">
+        <span class="p-float-label">
+          <label for="name">Nombres</label>
+          <!-- The following line creates a text input for the client's name. The [(ngModel)]="client.name" line binds the value of this field to the name property of the client object. The formControlName="name" line binds the value to the name field in the FormGroup instance. -->
+          <input type="text"  [(ngModel)]="client.name" formControlName="name" id="name">
+        </span>
+      </div>
+      <!-- The following div contains the field for the client's last name, which is bound to the last_name field in the FormGroup instance. -->
+      <div id="Lasts" class="p-col-12 p-md-4">
+        <span class="p-float-label">
+          <label for="lastName">Apellidos</label>
+          <input type="text" [(ngModel)]="client.last_name" formControlName="last_name" id="lastName">
+        </span>
+      </div>
+      <!-- The following div contains the field for the client's email -->
+      <div id="Mail" class="p-col-12 p-md-4">
+        <span class="p-float-label">
+          <label for="email">Correo electrónico</label>
+          <input type="text" [(ngModel)]="client.email" formControlName="email" id="email">
+        </span>
+      </div>
+      <!-- The following div contains the field for the client's phone num -->
+      <div id="PhoneNum" class="p-col-12 p-md-4">
+        <span class="p-float-label">
+          <label for="phone">Número de teléfono</label>
+          <input type="number" [(ngModel)]="client.phone_number" formControlName="phone_number" id="phone">
+        </span>
+      </div>
+      <!-- The following section contains the field for the submit button -->
+    </section>
+    <section id="Agregar" class="p-col-12">
+      <button pButton type="submit" label="Agregar" icon="pi pi-check" [disabled]="!addForm.valid"></button>
+      <span *ngIf="!addForm.valid">{{ formError }}</span>
+    </section>
+    
+  </div>
+</form>

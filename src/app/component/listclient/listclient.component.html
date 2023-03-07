@@ -1,0 +1,32 @@
+<!-- The table displays information about clients -->
+<table>
+    <!-- Table header -->
+    <thead>
+        <tr> 
+            <th>DOC TYPE </th>
+            <th>DOC NUMBER </th>
+            <th>NAME</th>
+            <th>LAST NAME</th>
+            <th>EMAIL</th>
+            <th>PHONE NUMBER</th>
+        </tr>
+    </thead>
+    <!-- Table body -->
+    <tbody>
+        <!-- *ngFor is used to iterate over the list of clients -->
+        <tr *ngFor="let client of clients">
+            <!-- Client data is displayed in each row -->
+            <td>{{client.doc_type}}</td> 
+            <td>{{client.doc_number}}</td>
+            <td>{{client.name}}</td>
+            <td>{{client.last_name}}</td>
+            <td>{{client.email}}</td>
+            <td>{{client.phone_number}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+

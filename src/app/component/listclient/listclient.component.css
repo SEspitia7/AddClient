@@ -1,0 +1,27 @@
+/* Setting the width of the table to 100% of the page width and the border to 1px solid black. */
+table {
+    width: 100%;
+    border: 1px solid #000;
+ }
+/* Setting the width of the table header to 25% of the table width. It is also setting the text
+alignment to center, the vertical alignment to top, the border to 1px solid black, the color to
+white, the background color to dark blue, and the font size to 30px. */
+th{
+    width: 25%;
+    text-align: center;
+    vertical-align: top;
+    border: 1px solid #000;
+    color: rgb(255, 255, 255);
+    background-color: darkblue;
+    font-size: 30px;
+    vertical-align: middle;
+ }
+/* Setting the width of the table data to 25% of the table width. It is also setting the text alignment
+to left, the vertical alignment to top, the border to 1px solid black, and the font size to 30px. */
+td {
+   width: 25%;
+   text-align: left;
+   vertical-align: top;
+   border: 1px solid #000;
+   font-size: 30px;
+}

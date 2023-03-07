@@ -1,0 +1,106 @@
+/* Setting the margin and padding to 0 for all elements. */
+*{
+  margin: 0;padding: 0;
+}
+/* Setting the background color of the html element to royalblue. */
+html{
+  background-color:royalblue;
+}
+/* Setting the background color of the header to rgb(3, 23, 85), the width to 100%, the height to auto,
+and the margin-bottom to 00px. */
+header{
+  background-color:rgb(3, 23, 85);
+  width: 100%;
+  height: auto;
+  margin-bottom: 00px;
+}
+/* Setting the background color of the header to rgb(50, 42, 99), the color to rgb(255, 255, 255), the
+font-family to 'Trebuchet MS', the font-size to 50px, the line-height to 100px, the text-align to
+center, and the font-weight to bold. */
+header .Titulo{
+  background-color: rgb(50, 42, 99);
+  color: rgb(255, 255, 255);
+  font-family:'Trebuchet MS';
+  font-size: 50px;
+  line-height: 100px;
+  text-align: center;
+  font-weight: bold;
+}
+/* Setting the line-height of the nav element to 75px. */
+header nav{
+  line-height: 75px;
+}
+/* Setting the width of the header nav a element to 100%, the color to beige, the font-size to 40px,
+and the font-weight to bold. */
+header nav a{
+  width: 100%;
+  color: beige;
+  font-size: 40px;
+  font-weight: bold;
+}
+/* Setting the display of the li element to inline-block, the color to beige, the padding to 10px 30px,
+and the font-weight to bold. */
+header nav ul li{
+  display:inline-block;
+  color: beige;
+  padding: 10px 30px;
+  font-weight: bold;
+}
+/* Changing the background color of the header nav ul li a:hover element to rgb(92, 128, 248),
+the color to darkblue, the font-weight to bold, the border-radius to 35px, and the padding to 20px
+10px. */
+header nav ul li a:hover{
+  background:rgb(92, 128, 248);
+  color:darkblue;
+  font-weight: bold;
+  border-radius: 35px;
+  padding: 20px 10px ;
+}
+/* Setting the background color of the footer to rgb(3, 11, 85), the width to 100%, the
+overflow to hidden, and the text-align to center. */
+footer{
+  background-color:rgb(3, 11, 85);
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+/* Setting the display of the footer nav a element to inline-block, the color to beige,
+the padding to 10px 10px, the font-size to 50px, and the font-weight to bold. */
+footer nav a{
+  display:inline-block;
+  color: beige;
+  padding: 10px 10px;
+  font-size: 50px;
+  font-weight: bold;
+}
+/* Changing the background color of the footer nav a:hover element to rgb(255, 255, 255),
+the color to rgb(3, 23, 85), and the border-radius to 35px. */
+footer nav a:hover{
+  background:rgb(255, 255, 255);
+  color: rgb(3, 23, 85);
+  border-radius: 35px;
+}
+/* Centering the text, setting the width to 100%, setting the max-width to 2000px,
+setting the margin to auto, and setting the overflow to hidden. Like a Class */
+.wrapper{
+  text-align: center;
+  width: 100%;
+  max-width: 2000px;
+  margin: auto;
+  overflow: hidden;
+}
+/* Setting the margin to 0, the padding-top to -100%, the color to #1a07be, the text-shadow to 3px 3px
+1px black, the font-size to 60px, the text-align to center, and the letter-spacing to 1.5px. */
+h1 {
+    margin: 0;
+    padding-top: -100%;
+    color: #1a07be;
+    text-shadow: 3px 3px 1px black;    
+    font-size: 60px;
+    text-align: center;
+    letter-spacing: 1.5px;
+  }
+/* Making the main element relative to the other elements. */
+main{
+  position: relative;
+}

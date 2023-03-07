@@ -1,0 +1,61 @@
+<!-- This is a heading for the search feature for clients by document number -->
+<H1>Busqueda de cliente Por Documento</H1>
+
+<body>
+  <!-- This is a form for searching clients by document number -->
+  <form id="Busqueda" name="myform" (ngSubmit)="search()">
+    <!-- This is a dropdown menu for selecting the type of document to search for -->
+    <div id="Tipo" class="p-col-12 p-md-4">
+      <span class="p-float-label">
+        <label for="docTypeSelect"> Seleccionar Tipo de documento: </label>
+        <select id="docTypeSelect" #docTypeSelect>
+          <option value=" "></option>
+          <option value="CC">CC</option>
+          <option value="NIT">NIT</option>
+          <option value="PASAPORTE">PASAPORTE</option>     
+        </select>
+      </span>
+    </div>
+    <!-- This is an input field for entering the document number to search for -->
+    <div id="Num">
+      <span class="p-float-label">
+        <label for="docNumberInput">Número de documento:</label>
+        <input type="text" id="docNumberInput" #docNumberInput>
+      </span>
+    </div>
+    <!-- This is a section for the search button -->
+    <section id="Busqueda" class="p-col-12">
+      <button type="submit">Buscar</button>
+    </section>
+  </form>
+
+  <!-- This is a table for displaying search results -->
+  <table #table *ngIf="clients.length > 0">
+    <thead>
+      <!-- These are the headers for the search results table -->
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Tipo de documento</th>
+        <th>Número de documento</th>
+        <th>Teléfono</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- This is a loop for displaying each client in the search results -->
+      <tr *ngFor="let client of clients">
+        <td>{{ client.name }}</td>
+        <td>{{ client.last_name }}</td>
+        <td>{{ client.doc_type }}</td>
+        <td>{{ client.doc_number }}</td>
+        <td>{{ client.phone_number }}</td>
+        <td>{{ client.email }}</td>
+      </tr>
+    </tbody>
+    <!-- This is a section for the export button -->
+    <section id="Exportacion" class="p-col-12">
+      <button type="button" (click)="exportToCsv()">Exportar</button>
+    </section>
+  </table>
+</body>
